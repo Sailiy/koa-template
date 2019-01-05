@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+const { resolve } = require('path')
+
+require('babel-core/register')({
+  presets: ['env'],
+  plugins: ['transform-decorators-legacy']
+})
+require('babel-polyfill')
+require('./www')
